@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Para Valeria 🌻</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  font-family:"DM Sans",system-ui,sans-serif;
+  background:radial-gradient(circle at 50% 35%,#3b2b08 0%,#171205 38%,#070705 100%);
+  color:#fff9dc;
+}
+.scene{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.glow{
+  position:absolute;width:70vw;height:70vw;max-width:520px;max-height:520px;border-radius:50%;
+  background:rgba(255,210,40,.11);filter:blur(55px);animation:pulse 4s ease-in-out infinite
+}
+@keyframes pulse{50%{transform:scale(1.18);opacity:.65}}
+.card{
+  animation:cardIn 1.7s ease both;position:relative;z-index:5;width:min(88%,430px);
+  padding:38px 24px;border:1px solid rgba(255,218,72,.22);border-radius:28px;
+  background:rgba(20,17,7,.62);backdrop-filter:blur(12px);
+  box-shadow:0 20px 70px rgba(0,0,0,.45);text-align:center
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.small{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#f5d65b;margin-bottom:16px}
+h1{
+  font-family:Georgia,serif;font-size:46px;line-height:1.15;margin:0 0 16px;
+  font-weight:500;letter-spacing:.2px;color:#ffe58a;font-style:italic;
+  text-shadow:0 0 24px rgba(255,211,61,.16);white-space:nowrap
+}
+.intro{font-family:Georgia,serif;font-size:20px;line-height:1.55;color:#eee6c8;margin:0 auto 25px;max-width:340px;text-align:center}
+button{
+  border:0;border-radius:999px;padding:14px 25px;font-size:16px;font-weight:700;
+  color:#211b06;background:linear-gradient(135deg,#ffe45a,#f4bb1e);
+  box-shadow:0 8px 25px rgba(255,197,31,.25);cursor:pointer;transition:.25s transform,.25s box-shadow
+}
+button:active{transform:scale(.95)}
+.hidden{display:none}
+.message{animation:rise 1.5s cubic-bezier(.2,.75,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+.message .small,.message .highlight,.message p,.message .signature,.message button{
+  opacity:0;animation:softIn 1.1s ease forwards
+}
+.message .small{animation-delay:.25s}.message .highlight{animation-delay:.8s}
+.message p:nth-of-type(1){animation-delay:1.5s}.message p:nth-of-type(2){animation-delay:2.1s}
+.message .signature{animation-delay:2.8s}.message button{animation-delay:3.4s}
+@keyframes softIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.message p{font-family:Georgia,serif;font-size:20px;line-height:1.55;margin:18px auto;color:#fff8df;max-width:330px;text-align:center}
+.message .highlight{font-family:Georgia,serif;font-size:26px;font-weight:700;line-height:1.35;color:#ffdb3b;margin:20px auto;max-width:335px;text-align:center}
+.signature{margin-top:28px;font-family:cursive;font-size:28px;color:#cfc6a4}
+.replay{margin-top:18px;background:transparent;color:#cfc28e;box-shadow:none;font-size:13px}
+.botanical{
+  position:absolute;width:92px;height:130px;z-index:2;opacity:.72;
+  filter:drop-shadow(0 0 14px rgba(255,208,45,.16));animation:sway 7s ease-in-out infinite
+}
+.botanical .stem{
+  position:absolute;width:3px;height:92px;background:linear-gradient(#78913b,#394a21);
+  left:46px;top:38px;transform:rotate(10deg);border-radius:9px;transform-origin:top
+}
+.botanical .petals{
+  position:absolute;left:24px;top:5px;width:50px;height:50px;border-radius:50%;
+  background:repeating-conic-gradient(from 0deg,#ffe46a 0 11deg,transparent 11deg 22deg);
+  filter:drop-shadow(0 0 7px rgba(255,216,62,.22))
+}
+.botanical .center{
+  position:absolute;left:39px;top:20px;width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle,#6b4a12 0 22%,#3c2a0b 25% 48%,#704d10 52% 100%);
+  box-shadow:0 0 8px rgba(255,205,48,.18)
+}
+.b1{left:-8px;top:7%;transform:scale(.82);animation-delay:-1s}
+.b2{right:-15px;top:13%;transform:scale(.72);animation-delay:-3s}
+.b3{left:-18px;bottom:7%;transform:scale(.62);animation-delay:-2s}
+.b4{right:-10px;bottom:12%;transform:scale(.8);animation-delay:-4s}
+.softflower{position:absolute;z-index:1;opacity:.16;filter:blur(2px);font-size:80px;animation:softFloat 9s ease-in-out infinite}
+.sf1{left:20%;top:2%;animation-delay:-3s}.sf2{right:18%;bottom:0;animation-delay:-6s}
+@keyframes sway{0%,100%{margin-top:0;transform:rotate(-3deg)}50%{margin-top:-9px;transform:rotate(4deg)}}
+@keyframes softFloat{0%,100%{transform:translateY(0) scale(.96)}50%{transform:translateY(-14px) scale(1.03)}}
+.petal{
+  position:absolute;top:-40px;color:#ffd92f;font-size:18px;opacity:.75;
+  animation:fall linear forwards;z-index:3
+}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg);opacity:0}}
+.spark{
+  position:absolute;width:4px;height:4px;background:#ffe36b;border-radius:50%;
+  box-shadow:0 0 10px #ffd83d;animation:twinkle 2s ease-in-out infinite
+}
+@keyframes twinkle{50%{opacity:.15;transform:scale(.5)}}
+.flower-big{font-size:70px;margin:3px 0 8px;animation:bloom 1.2s ease both}
+@keyframes bloom{0%{transform:scale(.2) rotate(-18deg);opacity:0}70%{transform:scale(1.12) rotate(5deg)}100%{transform:scale(1) rotate(0);opacity:1}}
+
+@media (max-width:390px){
+.card{width:90%;padding:32px 20px}
+h1{font-size:40px}
+.intro{font-size:18px;line-height:1.5;max-width:315px}
+.message p{font-size:18px;line-height:1.5;max-width:300px}
+.message .highlight{font-size:23px;line-height:1.35;max-width:300px}
+}
+</style>
+</head>
+<body>
+<div class="scene" id="scene">
+  <div class="glow"></div>
+  <div class="botanical b1"><span class="stem"></span><span class="petals"></span><span class="center"></span></div>
+  <div class="botanical b2"><span class="stem"></span><span class="petals"></span><span class="center"></span></div>
+  <div class="botanical b3"><span class="stem"></span><span class="petals"></span><span class="center"></span></div>
+  <div class="botanical b4"><span class="stem"></span><span class="petals"></span><span class="center"></span></div>
+  <div class="softflower sf1">🌼</div>
+  <div class="softflower sf2">🌼</div>
+
+  <div class="card" id="card">
+    <div id="intro">
+      <div class="small">🌻</div>
+      <h1>Valeria</h1>
+      <div class="flower-big">🌻</div>
+      <p class="intro">Hoy es un día de flores amarillas… y pensé que sería bonito regalarte unas a ti. 🌻</p>
+      <button onclick="openGift()">Hay algo para ti 💛</button>
+    </div>
+
+    <div id="message" class="message hidden">
+      <div class="small">Para ti 💛</div>
+      <div class="highlight">Porque algunas personas merecen un detalle especial.</div>
+      <p>Así que hoy quería dejarte un poquito de color, flores y una sonrisa. 🌻</p>
+      <p>Espero que este pequeño detalle te alegre el día.</p>
+      <div class="signature">— Jona ✨</div>
+      <button class="replay" onclick="location.reload()">Volver a verlo ↻</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function sparkle(){
+  const scene=document.getElementById('scene');
+  for(let i=0;i<22;i++){
+    const s=document.createElement('div');
+    s.className='spark';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=(Math.random()*2)+'s';
+    scene.appendChild(s);
+  }
+}
+function petalRain(){
+  const scene=document.getElementById('scene');
+  for(let i=0;i<32;i++){
+    setTimeout(()=>{
+      const p=document.createElement('div');
+      p.className='petal';
+      p.textContent=Math.random()>.25?'❧':'✦';
+      p.style.left=Math.random()*100+'%';
+      p.style.fontSize=(11+Math.random()*12)+'px';
+      p.style.animationDuration=(6+Math.random()*5)+'s';
+      scene.appendChild(p);
+      setTimeout(()=>p.remove(),9000);
+    },i*150);
+  }
+}
+function openGift(){
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('message').classList.remove('hidden');
+  petalRain();
+}
+sparkle();
+</script>
+</body>
+</html>
